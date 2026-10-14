@@ -355,10 +355,28 @@ html.simple .brand h1{font-size:1.9rem}
 .tab:focus-visible,.segbtn:focus-visible,.stepbtn:focus-visible,.theme-btn:focus-visible{outline:2px dashed var(--gold2);outline-offset:3px}
 html.simple .tab:after,html.simple .segbtn:after{display:none}
 @media(prefers-reduced-motion:reduce){.rip{display:none}.tab:after,.segbtn:after,.stepbtn:after,.theme-btn:after{display:none}}
+
+/* Logo en emblema */
+.brand-mark{width:88px;height:88px;background:none!important;clip-path:none!important;box-shadow:none!important;filter:drop-shadow(0 0 10px rgba(75,227,140,.35))}
+.brand-mark:after{display:none!important}.brand-mark svg{width:100%;height:100%;display:block;overflow:visible}
+@media(max-width:650px){.brand-mark{width:54px;height:54px}}
 </style></head><body><noscript><p style="padding:20px;font-family:sans-serif">Esta calculadora necesita JavaScript activado.</p></noscript><div class="app">
 <header class="app-header">
  <button type="button" id="themeBtn" class="theme-btn" aria-label="Cambiar a modo claro" title="Cambiar a modo claro">🌙</button>
- <div class="brand"><div class="brand-mark">TGCF</div><div><h1>TGCF</h1><div class="brand-sub">Calculadora de TGCF</div></div></div>
+ <div class="brand"><div class="brand-mark"><svg aria-hidden="true" focusable="false" viewBox="0 0 128 128"><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7dffb4"/><stop offset="1" stop-color="#1c8f4e"/></linearGradient>
+<linearGradient id="lp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14201a"/><stop offset="1" stop-color="#070c09"/></linearGradient></defs>
+<path d="M26 4H102L124 26V102L102 124H26L4 102V26Z" fill="url(#lp)" stroke="url(#lg)" stroke-width="4"/>
+<path d="M30 12H98L116 30V98L98 116H30L12 98V30Z" fill="none" stroke="#2fbf6e" stroke-width="1.2" opacity=".65"/>
+<path d="M20 64H11M117 64H108M64 20V11M64 117V108" stroke="#2fbf6e" stroke-width="1.5" opacity=".5"/>
+<g fill="#4be38c"><circle cx="22" cy="22" r="2.4"/><circle cx="106" cy="22" r="2.4"/></g>
+<polygon points="64.0,18.0 66.9,26.0 75.4,26.3 68.8,31.5 71.1,39.7 64.0,35.0 56.9,39.7 59.2,31.5 52.6,26.3 61.1,26.0" fill="url(#lg)" stroke="#0b130e" stroke-width=".8"/>
+<g fill="none" stroke-linejoin="miter" stroke-linecap="butt">
+<polyline points="34,62 64,47 94,62" stroke="#7dffb4" stroke-width="7"/>
+<polyline points="34,75 64,60 94,75" stroke="#2fbf6e" stroke-width="7"/>
+<polyline points="34,88 64,73 94,88" stroke="#1c8f4e" stroke-width="7"/></g>
+<rect x="24" y="97" width="80" height="17" fill="url(#lg)"/>
+<path d="M24 97L30 97L24 103Z M104 114L98 114L104 108Z" fill="#070c09"/>
+<text x="64" y="110.2" text-anchor="middle" font-family="Impact,Haettenschweiler,'Arial Black','DejaVu Sans',sans-serif" font-weight="900" font-size="14" letter-spacing="3.5" fill="#070c09">TGCF</text></svg></div><div><h1>TGCF</h1><div class="brand-sub">Calculadora de TGCF</div></div></div>
  <div class="header-meta"><div class="sys-label">Orden DEF/15/2026 · Anexo II</div><div class="date-chip">Vigente desde 01/01/2027</div></div>
 </header>
 <div class="note"><b>BASE NORMATIVA</b> · Anexo II de la Orden DEF/15/2026 · Marcas del baremo sin interpolación.</div>
