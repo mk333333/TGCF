@@ -2,12 +2,12 @@
    Estrategia: red primero y copia local como respaldo (así se ven las actualizaciones
    en cuanto hay conexión y la app sigue funcionando sin ella).
    Si cambias algún archivo, sube también este y aumenta VERSION. */
-const VERSION = 'tgcf-v20';
+const VERSION = 'tgcf-v21';
 const ARCHIVOS = [
   './',
   'index.html',
-  'boot.js',
-  'app.js',
+  'boot.js?v=20',
+  'app.js?v=20',
   'manifest.webmanifest',
   'icons/icon-192.png',
   'icons/icon-512.png',
@@ -34,7 +34,7 @@ self.addEventListener('fetch', function (e) {
   const req = e.request;
   if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
   e.respondWith(
-    fetch(req).then(function (res) {
+    fetch(req,{cache:'no-cache'}).then(function (res) {
       if (res && res.ok && res.type === 'basic') {
         const copia = res.clone();
         caches.open(VERSION).then(function (c) { c.put(req, copia); });

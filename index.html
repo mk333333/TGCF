@@ -1,7 +1,7 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src 'self' data:; manifest-src 'self'; worker-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'; frame-src 'none'; media-src 'none'; font-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="no-referrer">
-<script src="boot.js"></script>
+<script src="boot.js?v=20"></script>
 
 
 
@@ -379,6 +379,15 @@ html[data-theme="light"] .tab:not(.active),html[data-theme="light"] .segbtn:not(
 html[data-theme="light"] .tab.active:not(:hover),html[data-theme="light"] .segbtn.active:not(:hover){color:#0b140e}
 html[data-theme="light"] .tab.active{background:linear-gradient(180deg,#e3ebdf,#d3dfcd)}
 html[data-theme="light"] details{background:#d5dfd0}
+
+/* Tipografía del título: condensada y limpia (fuentes del sistema) */
+:root{--stencil:"Bahnschrift","Barlow Condensed","Roboto Condensed","Arial Narrow",sans-serif-condensed,"Segoe UI",system-ui,sans-serif}
+.brand h1,.section-title,.radar-title,.tab,.segbtn,.tests label,.metric-score,.status{font-weight:800!important}
+.brand h1{font-size:2.6rem;letter-spacing:5px;font-stretch:condensed;text-shadow:0 2px 14px rgba(75,227,140,.35)}
+html[data-theme="light"] .brand h1{text-shadow:none}
+.brand-sub{letter-spacing:4px}
+@media(max-width:650px){.brand h1{font-size:2.1rem;letter-spacing:4px}}
+html.simple .brand h1{font-size:1.9rem}
 </style></head><body><noscript><p style="padding:20px;font-family:sans-serif">Esta calculadora necesita JavaScript activado.</p></noscript><div class="app">
 <header class="app-header">
  <button type="button" id="themeBtn" class="theme-btn" aria-label="Cambiar a modo claro" title="Cambiar a modo claro">🌙</button>
@@ -447,4 +456,4 @@ html[data-theme="light"] details{background:#d5dfd0}
  <p>Herramienta orientativa basada en el Anexo II de la Orden DEF/15/2026 (BOE 21-01-2026). No es oficial ni vinculante: la calificación oficial la determina el órgano evaluador con la norma vigente. Pueden existir errores; el autor no se responsabiliza del uso de los resultados.</p>
 </details>
 </div>
-<script src="app.js" defer></script></body></html>
+<script src="app.js?v=20" defer></script></body></html>
