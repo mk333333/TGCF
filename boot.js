@@ -1,0 +1,3 @@
+try{if(window.top!==window.self){document.documentElement.style.display="none";window.top.location=window.self.location}}catch(e){document.documentElement.style.display="none"};
+(function(){try{var m=Math.min(screen.width,screen.height),c=window.matchMedia&&window.matchMedia("(pointer:coarse)").matches;if(c&&m<600)document.documentElement.classList.add("simple")}catch(e){}})();
+(function(){var t=null;try{t=localStorage.getItem("tgcf-theme")}catch(e){}if(t!=="light"&&t!=="dark"){t=(window.matchMedia&&window.matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark"}document.documentElement.setAttribute("data-theme",t)})();
