@@ -234,10 +234,8 @@ html.simple .aviso-short{display:block;padding:8px 12px;font-size:.7rem}
 .tab,.segbtn{border:1.5px solid #52665a}
 .tab.active,.segbtn.active{border-color:#f0c83e}
 .theme-btn{border-width:1.5px}
-summary{border:1.5px solid #52665a;border-radius:12px}
 html[data-theme="light"] .tab,html[data-theme="light"] .segbtn{border-color:#9fb09b}
 html[data-theme="light"] .tab.active,html[data-theme="light"] .segbtn.active{border-color:#b08408}
-html[data-theme="light"] summary{border-color:#9fb09b}
 .stepwrap{position:relative}.stepwrap input{padding-right:46px!important}
 .stepbtns{position:absolute;top:4px;bottom:4px;right:4px;width:36px;display:flex;flex-direction:column;gap:3px}
 .stepbtn{flex:1;min-height:0;padding:0;border:1.5px solid #52665a;border-radius:7px;background:transparent;color:var(--gold2);font-size:.62rem;line-height:1;display:grid;place-items:center;touch-action:manipulation;-webkit-tap-highlight-color:transparent;user-select:none}
@@ -277,6 +275,67 @@ table tr{animation:rowin .4s both}table tr:nth-child(2){animation-delay:.04s}tab
 table tbody tr:hover td,table tr:hover td{background:rgba(214,169,22,.08)}
 .metric{transition:transform .2s,box-shadow .2s}.metric:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(214,169,22,.14)}
 .card:before{width:100%;background:linear-gradient(90deg,var(--gold),#32d583 45%,#5b9bd5 75%,transparent)}
+
+/* ===== Estilo militar / táctico ===== */
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes flow{from{background-position:0 0}to{background-position:200% 0}}
+@keyframes march{from{background-position:0 0}to{background-position:28px 0}}
+:root{--stencil:Impact,Haettenschweiler,"Franklin Gothic Heavy","Arial Narrow Bold","Arial Black",sans-serif;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Courier New",monospace;--brk:#d6a916}
+html:not([data-theme="light"]) body{background:
+ radial-gradient(ellipse 38% 26% at 12% 18%,rgba(86,108,58,.30),transparent 72%),
+ radial-gradient(ellipse 34% 38% at 88% 62%,rgba(66,82,44,.32),transparent 72%),
+ radial-gradient(ellipse 28% 22% at 58% 8%,rgba(120,102,52,.20),transparent 72%),
+ radial-gradient(ellipse 30% 26% at 30% 88%,rgba(52,66,38,.34),transparent 72%),#060907;background-attachment:fixed}
+html[data-theme="light"] body{background:
+ radial-gradient(ellipse 38% 26% at 12% 18%,rgba(140,155,100,.30),transparent 72%),
+ radial-gradient(ellipse 34% 38% at 88% 62%,rgba(160,150,100,.30),transparent 72%),
+ radial-gradient(ellipse 28% 22% at 58% 8%,rgba(190,175,120,.26),transparent 72%),
+ radial-gradient(ellipse 30% 26% at 30% 88%,rgba(120,140,90,.28),transparent 72%),#e4e8d8;background-attachment:fixed}
+body{font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif}
+.brand h1,.section-title,.radar-title{font-family:var(--stencil);text-transform:uppercase;letter-spacing:3px;font-weight:400}
+.brand h1{font-size:2.5rem;text-shadow:3px 3px 0 rgba(0,0,0,.35)}
+html[data-theme="light"] .brand h1{text-shadow:2px 2px 0 rgba(120,90,0,.18)}
+.brand-sub,.section-kicker,label,th,.result-tag,.small,.header-meta{font-family:var(--mono)}
+.brand-sub:before{content:"// "}.section-kicker:before{content:"[ ";}.section-kicker:after{content:" ]"}
+.app-header,.card,.tabs,.field,.tests>div,.radar-card,.sim-table,.metric,.seg,.result-tag,table,summary,.status,.tab,.segbtn,input{border-radius:3px!important}
+.app-header{border-bottom:7px solid transparent;border-image:repeating-linear-gradient(-45deg,#d6a916 0 11px,#0c110d 11px 22px) 0 0 7 0}
+html[data-theme="light"] .app-header{border-image:repeating-linear-gradient(-45deg,#b08408 0 11px,#3b4a2e 11px 22px) 0 0 7 0}
+.app-header:before{animation:march 2.2s linear infinite}
+.card{background-image:
+ linear-gradient(var(--brk),var(--brk)),linear-gradient(var(--brk),var(--brk)),
+ linear-gradient(var(--brk),var(--brk)),linear-gradient(var(--brk),var(--brk)),
+ linear-gradient(var(--brk),var(--brk)),linear-gradient(var(--brk),var(--brk)),
+ linear-gradient(var(--brk),var(--brk)),linear-gradient(var(--brk),var(--brk)),
+ linear-gradient(145deg,rgba(18,26,21,.97),rgba(9,13,11,.97));
+ background-repeat:no-repeat;background-size:18px 3px,3px 18px,18px 3px,3px 18px,18px 3px,3px 18px,18px 3px,3px 18px,auto;
+ background-position:0 0,0 0,100% 0,100% 0,0 100%,0 100%,100% 100%,100% 100%,0 0}
+html[data-theme="light"] .card{--brk:#8a6a06;background-image:
+ linear-gradient(var(--brk),var(--brk)),linear-gradient(var(--brk),var(--brk)),
+ linear-gradient(var(--brk),var(--brk)),linear-gradient(var(--brk),var(--brk)),
+ linear-gradient(var(--brk),var(--brk)),linear-gradient(var(--brk),var(--brk)),
+ linear-gradient(var(--brk),var(--brk)),linear-gradient(var(--brk),var(--brk)),
+ linear-gradient(145deg,#fbfcf6,#eef1e2);
+ background-repeat:no-repeat;background-size:18px 3px,3px 18px,18px 3px,3px 18px,18px 3px,3px 18px,18px 3px,3px 18px,auto;
+ background-position:0 0,0 0,100% 0,100% 0,0 100%,0 100%,100% 100%,100% 100%,0 0}
+.card:before{background-size:200% 100%;animation:flow 5s linear infinite;height:3px}
+.tab,.segbtn{font-family:var(--stencil);font-weight:400!important;letter-spacing:2px;text-transform:uppercase;font-size:.95rem}
+.tab.active:before{content:"\25B6\00a0";font-size:.7em}.segbtn.active:before{content:"\25C6\00a0";font-size:.7em}
+.tab.active,.segbtn.active{background:repeating-linear-gradient(-45deg,rgba(0,0,0,.07) 0 6px,transparent 6px 12px),linear-gradient(135deg,#e7bd35,#b88c0c)}
+input{font-family:var(--mono);letter-spacing:1px}
+.tests label{font-family:var(--stencil);letter-spacing:2px;font-weight:400;font-size:.85rem}
+th{letter-spacing:1.5px}td,.metric-score,.threshold{font-family:var(--mono)}
+.metric-score{font-family:var(--stencil);letter-spacing:1px;font-weight:400;font-size:1.5rem}
+.status{font-family:var(--stencil);font-weight:400;letter-spacing:3px;font-size:.95rem;border-width:2px}
+.status:before{content:"";width:9px;height:9px;border-radius:50%;background:currentColor;animation:blink 1.1s steps(2,jump-none) infinite;box-shadow:0 0 8px currentColor}
+.radar-wrap{position:relative}
+.radar-wrap:after{content:"";position:absolute;left:50%;top:50%;width:min(86%,300px);aspect-ratio:1;margin:calc(min(86%,300px)/-2) 0 0 calc(min(86%,300px)/-2);border-radius:50%;background:conic-gradient(from 0deg,rgba(50,213,131,.30),rgba(50,213,131,0) 28%);animation:spin 4.5s linear infinite;pointer-events:none;mix-blend-mode:screen}
+html[data-theme="light"] .radar-wrap:after{background:conic-gradient(from 0deg,rgba(138,106,6,.28),rgba(138,106,6,0) 28%);mix-blend-mode:multiply}
+.theme-btn{border-radius:3px!important}
+::selection{background:#d6a916;color:#0c110d}
+@media(max-width:650px){.brand h1{font-size:2rem}}
+html.simple .brand h1{font-size:1.9rem}
+@media(prefers-reduced-motion:reduce){.app-header:before,.card:before,.status:before,.radar-wrap:after{animation:none!important}}
 </style></head><body><noscript><p style="padding:20px;font-family:sans-serif">Esta calculadora necesita JavaScript activado.</p></noscript><div class="app">
 <header class="app-header">
  <button type="button" id="themeBtn" class="theme-btn" aria-label="Cambiar a modo claro" title="Cambiar a modo claro">🌙</button>
