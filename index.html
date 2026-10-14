@@ -230,6 +230,14 @@ html.simple .theme-btn:active{transform:translateY(-50%) scale(.94)}
 html[data-theme="light"] .aviso{background:#ffffff}
 html.simple .aviso-full{display:none}
 html.simple .aviso-short{display:block;padding:8px 12px;font-size:.7rem}
+/* Contorno visible en todo lo pulsable */
+.tab,.segbtn{border:1.5px solid #52665a}
+.tab.active,.segbtn.active{border-color:#f0c83e}
+.theme-btn{border-width:1.5px}
+summary{border:1.5px solid #52665a;border-radius:12px}
+html[data-theme="light"] .tab,html[data-theme="light"] .segbtn{border-color:#9fb09b}
+html[data-theme="light"] .tab.active,html[data-theme="light"] .segbtn.active{border-color:#b08408}
+html[data-theme="light"] summary{border-color:#9fb09b}
 </style></head><body><noscript><p style="padding:20px;font-family:sans-serif">Esta calculadora necesita JavaScript activado.</p></noscript><div class="app">
 <header class="app-header">
  <button type="button" id="themeBtn" class="theme-btn" onclick="toggleTheme()" aria-label="Cambiar a modo claro" title="Cambiar a modo claro">🌙</button>
