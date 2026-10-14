@@ -514,6 +514,27 @@ function show(id,b){document.getElementById('min').style.display=id==='min'?'blo
     el.addEventListener('touchcancel',end);
   });
 
+  /* Rueda del ratón (con la casilla seleccionada) y flechas del teclado: suben/bajan el valor */
+  Object.keys(CFG).forEach(function(id){
+    const el=document.getElementById(id),c=CFG[id];
+    if(!el)return;
+    const unit=c.t==='dec'?0.1:1;
+    function move(dir,mult){
+      let v=read(el,c)+dir*unit*(mult||1);
+      v=clamp(c.t==='dec'?Math.round(v*10)/10:Math.round(v),c);
+      el.value=fmt(v,c);el.dispatchEvent(new Event('input',{bubbles:true}));
+    }
+    el.addEventListener('wheel',function(e){
+      if(document.activeElement!==el)return;          /* solo si has pinchado en la casilla */
+      e.preventDefault();
+      if(!e.deltaY)return;
+      move(e.deltaY<0?1:-1,e.shiftKey?5:1);
+    },{passive:false});
+    el.addEventListener('keydown',function(e){
+      if(e.key==='ArrowUp'||e.key==='ArrowDown'){e.preventDefault();move(e.key==='ArrowUp'?1:-1,e.shiftKey?5:1)}
+    });
+  });
+
   /* Flechas ▲▼ en las cuatro marcas (se suman al toque y arrastre y al teclado) */
   ['push','plank','run','agil'].forEach(function(id){
     const el=document.getElementById(id),c=CFG[id];
