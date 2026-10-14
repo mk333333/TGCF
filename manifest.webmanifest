@@ -2,7 +2,7 @@
   "id": "./",
   "name": "Calculadora de TGCF",
   "short_name": "TGCF",
-  "description": "Mínimos y simulación de las pruebas físicas del Anexo II de la Orden DEF/15/2026.",
+  "description": "Marcas mínimas de las pruebas físicas del Anexo II de la Orden DEF/15/2026.",
   "lang": "es",
   "dir": "ltr",
   "start_url": "./",
