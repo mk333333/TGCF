@@ -597,3 +597,16 @@ if('serviceWorker' in navigator&&/^https?:$/.test(location.protocol)){
   (function(){var el=document.getElementById('agil');if(el)el.addEventListener('input',function(event){(function(){cleanInput(this);simCalc()}).call(el)})})();
   (function(){var el=document.getElementById('run');if(el)el.addEventListener('input',function(event){(function(){cleanInput(this);simCalc()}).call(el)})})();
 })();
+
+;/* Onda al pulsar y vibración corta en móvil */
+(function(){
+  var SEL='.tab,.segbtn,.stepbtn,.theme-btn';
+  document.addEventListener('pointerdown',function(e){
+    var b=e.target.closest&&e.target.closest(SEL);if(!b)return;
+    try{if(navigator.vibrate&&e.pointerType==='touch')navigator.vibrate(8)}catch(_){}
+    if(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+    var r=b.getBoundingClientRect(),s=document.createElement('span');s.className='rip';
+    s.style.left=(e.clientX-r.left)+'px';s.style.top=(e.clientY-r.top)+'px';
+    b.appendChild(s);setTimeout(function(){if(s.parentNode)s.parentNode.removeChild(s)},650);
+  },true);
+})();
