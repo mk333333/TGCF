@@ -2,7 +2,7 @@
    Estrategia: red primero y copia local como respaldo (así se ven las actualizaciones
    en cuanto hay conexión y la app sigue funcionando sin ella).
    Si cambias algún archivo, sube también este y aumenta VERSION. */
-const VERSION = 'tgcf-v13';
+const VERSION = 'tgcf-v14';
 const ARCHIVOS = [
   './',
   'index.html',
