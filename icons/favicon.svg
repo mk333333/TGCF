@@ -1,29 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><defs>
-<linearGradient id="gm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a5a50"/><stop offset=".45" stop-color="#1b241f"/><stop offset="1" stop-color="#0a0f0c"/></linearGradient>
-<linearGradient id="gr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8dffbf"/><stop offset=".6" stop-color="#2fbf6e"/><stop offset="1" stop-color="#127a40"/></linearGradient>
-<radialGradient id="lens" cx=".5" cy=".5" r=".55"><stop offset="0" stop-color="#1f5a38"/><stop offset=".55" stop-color="#0f3322"/><stop offset=".9" stop-color="#06150e"/><stop offset="1" stop-color="#020805"/></radialGradient>
-<linearGradient id="sh" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".30"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-<linearGradient id="pl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a362f"/><stop offset="1" stop-color="#0c130f"/></linearGradient>
-<clipPath id="lc"><circle cx="64" cy="64" r="47"/></clipPath></defs>
-<circle cx="64" cy="64" r="63" fill="url(#gm)"/>
-<circle cx="64" cy="64" r="62" fill="none" stroke="url(#gr)" stroke-width="1.6"/>
-<path d="M64.0 3.0L64.0 8.5M68.3 3.1L68.0 6.6M72.5 3.6L72.0 7.1M76.7 4.3L76.0 7.8M80.8 5.4L79.8 8.7M84.9 6.7L83.0 11.8M88.8 8.3L87.4 11.5M92.6 10.1L91.0 13.2M96.3 12.3L94.5 15.2M99.9 14.6L97.8 17.5M103.2 17.3L99.7 21.5M106.4 20.1L103.9 22.6M109.3 23.2L106.7 25.5M112.1 26.4L109.3 28.6M114.6 29.9L111.7 31.8M116.8 33.5L112.1 36.2M118.8 37.3L115.7 38.8M120.6 41.1L117.3 42.5M122.0 45.1L118.7 46.2M123.2 49.2L119.8 50.1M124.1 53.4L118.7 54.4M124.7 57.6L121.2 58.0M125.0 61.9L121.5 62.0M125.0 66.1L121.5 66.0M124.7 70.4L121.2 70.0M124.1 74.6L118.7 73.6M123.2 78.8L119.8 77.9M122.0 82.9L118.7 81.8M120.6 86.9L117.3 85.5M118.8 90.7L115.7 89.2M116.8 94.5L112.1 91.7M114.6 98.1L111.7 96.2M112.1 101.6L109.3 99.4M109.3 104.8L106.7 102.5M106.4 107.9L103.9 105.4M103.2 110.7L99.7 106.5M99.9 113.4L97.8 110.5M96.3 115.7L94.5 112.8M92.6 117.9L91.0 114.8M88.8 119.7L87.4 116.5M84.9 121.3L83.0 116.2M80.8 122.6L79.8 119.3M76.7 123.7L76.0 120.2M72.5 124.4L72.0 120.9M68.3 124.9L68.0 121.4M64.0 125.0L64.0 119.5M59.7 124.9L60.0 121.4M55.5 124.4L56.0 120.9M51.3 123.7L52.0 120.2M47.2 122.6L48.2 119.3M43.1 121.3L45.0 116.2M39.2 119.7L40.6 116.5M35.4 117.9L37.0 114.8M31.7 115.7L33.5 112.8M28.1 113.4L30.2 110.5M24.8 110.7L28.3 106.5M21.6 107.9L24.1 105.4M18.7 104.8L21.3 102.5M15.9 101.6L18.7 99.4M13.4 98.1L16.3 96.2M11.2 94.5L15.9 91.8M9.2 90.7L12.3 89.2M7.4 86.9L10.7 85.5M6.0 82.9L9.3 81.8M4.8 78.8L8.2 77.9M3.9 74.6L9.3 73.6M3.3 70.4L6.8 70.0M3.0 66.1L6.5 66.0M3.0 61.9L6.5 62.0M3.3 57.6L6.8 58.0M3.9 53.4L9.3 54.4M4.8 49.2L8.2 50.1M6.0 45.1L9.3 46.2M7.4 41.1L10.7 42.5M9.2 37.3L12.3 38.8M11.2 33.5L15.9 36.2M13.4 29.9L16.3 31.8M15.9 26.4L18.7 28.6M18.7 23.2L21.3 25.5M21.6 20.1L24.1 22.6M24.8 17.3L28.3 21.5M28.1 14.6L30.2 17.5M31.7 12.3L33.5 15.2M35.4 10.1L37.0 13.2M39.2 8.3L40.6 11.5M43.1 6.7L45.0 11.8M47.2 5.4L48.2 8.7M51.3 4.3L52.0 7.8M55.5 3.6L56.0 7.1M59.7 3.1L60.0 6.6" stroke="#7fa08c" stroke-width="1.5" opacity=".55"/>
-<circle cx="64" cy="64" r="53" fill="#070b09" stroke="#3d4d43" stroke-width="1"/>
-<circle cx="64" cy="64" r="51" fill="none" stroke="url(#gr)" stroke-width="2.4"/>
-<circle cx="64" cy="64" r="48.4" fill="#020604"/>
-<circle cx="64" cy="64" r="47" fill="url(#lens)"/>
-<g clip-path="url(#lc)">
-<circle cx="64" cy="64" r="34" fill="none" stroke="#2fbf6e" stroke-width=".6" opacity=".35" stroke-dasharray="1.5 2.5"/>
-<circle cx="64" cy="64" r="18" fill="none" stroke="#2fbf6e" stroke-width=".6" opacity=".3"/>
-<path d="M64 17V35M64 93V111M17 64H35M93 64H111" stroke="#58f0a0" stroke-width="3.6" stroke-linecap="butt"/>
-<path d="M64 17V111M17 64H111" stroke="#58f0a0" stroke-width=".7" opacity=".9"/>
-<g stroke="#58f0a0" stroke-width=".6" opacity=".75" fill="none"><path d="M58.4 60.8V67.2M69.6 60.8V67.2M60.8 58.4H67.2M60.8 69.6H67.2M52.8 62V66M75.2 62V66M62 52.8H66M62 75.2H66M47.2 60.8V67.2M80.8 60.8V67.2M60.8 47.2H67.2M60.8 80.8H67.2M41.6 62V66M86.4 62V66M62 41.6H66M62 86.4H66M36.0 60.8V67.2M92.0 60.8V67.2M60.8 36.0H67.2M60.8 92.0H67.2"/></g>
-<g fill="#58f0a0"><ellipse cx="56.8" cy="64.0" rx="1.7" ry="1.7"/><ellipse cx="71.2" cy="64.0" rx="1.7" ry="1.7"/><ellipse cx="64.0" cy="71.2" rx="1.7" ry="1.7"/><ellipse cx="64" cy="56.8" rx="1.7" ry="1.7"/><ellipse cx="50.6" cy="64.0" rx="1.7" ry="1.7"/><ellipse cx="77.4" cy="64.0" rx="1.7" ry="1.7"/><ellipse cx="64.0" cy="77.4" rx="1.7" ry="1.7"/><ellipse cx="64" cy="50.6" rx="1.7" ry="1.7"/><ellipse cx="44.4" cy="64.0" rx="1.7" ry="1.7"/><ellipse cx="83.6" cy="64.0" rx="1.7" ry="1.7"/><ellipse cx="64.0" cy="83.6" rx="1.7" ry="1.7"/><ellipse cx="64" cy="44.4" rx="1.7" ry="1.7"/><ellipse cx="38.2" cy="64.0" rx="1.7" ry="1.7"/><ellipse cx="89.8" cy="64.0" rx="1.7" ry="1.7"/><ellipse cx="64.0" cy="89.8" rx="1.7" ry="1.7"/><ellipse cx="64" cy="38.2" rx="1.7" ry="1.7"/></g>
-<path d="M54 54H49V49M74 54H79V49M54 74H49V79M74 74H79V79" fill="none" stroke="#58f0a0" stroke-width="1" opacity=".7"/>
-<circle cx="64" cy="64" r="1.6" fill="#d8ffe8"/>
-<ellipse cx="45" cy="38" rx="24" ry="11" transform="rotate(-36 45 38)" fill="url(#sh)"/>
-<circle cx="64" cy="64" r="47" fill="none" stroke="#000" stroke-opacity=".55" stroke-width="5"/>
-</g>
-<path d="M64 5.5V9.5M64 118.5V122.5M5.5 64H9.5M118.5 64H122.5" stroke="#8dffbf" stroke-width="2"/>
-<path d="M33 106Q64 120 95 106L92 114Q64 124 36 114Z" fill="url(#pl)" stroke="#3d4d43" stroke-width=".6"/>
-<text x="64" y="117.2" text-anchor="middle" font-family="Impact,Haettenschweiler,'Arial Black','DejaVu Sans',sans-serif" font-weight="900" font-size="8.6" letter-spacing="2" fill="#58f0a0">TGCF</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8dffbf"/><stop offset=".6" stop-color="#2fbf6e"/><stop offset="1" stop-color="#127a40"/></linearGradient></defs>
+<rect x="5" y="5" width="118" height="118" rx="11" fill="#08110c" stroke="url(#g)" stroke-width="5"/>
+<circle cx="64" cy="64" r="44" fill="none" stroke="#2fbf6e" stroke-width="1.6" opacity=".6"/>
+<path d="M64 14V40M64 88V114M14 64H24M104 64H114" stroke="#2fbf6e" stroke-width="2.6"/>
+<text x="64" y="73" text-anchor="middle" font-family="Impact,Haettenschweiler,'Arial Black','DejaVu Sans',sans-serif" font-weight="900" font-size="25" letter-spacing=".5" fill="url(#g)">TGCF</text>
+<path d="M32 82H96" stroke="#4be38c" stroke-width="3"/>
+<path d="M30 22H22V30M98 22H106V30M30 106H22V98M98 106H106V98" fill="none" stroke="#4be38c" stroke-width="3"/></svg>
