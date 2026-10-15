@@ -428,6 +428,18 @@ html.simple .banner,html.simple .err,html.simple .invalid{font-size:1.05rem}
 html.simple td,html.simple table td{font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;font-size:1.12rem;overflow-wrap:normal;word-break:normal;letter-spacing:0}
 html.simple th{font-size:.7rem;letter-spacing:.6px;overflow-wrap:normal;word-break:normal}
 html.simple td,html.simple th{padding-left:10px;padding-right:8px}
+
+/* Móvil: +2 puntos en todo el texto (las medidas en rem escalan con la raíz) */
+html.simple{font-size:calc(16px + 2pt)}
+html.simple body{font-size:calc(18px + 2pt)}
+html.simple .brand h1 .brand-title{height:50px}
+html.simple .brand-sub{font-size:.58rem;letter-spacing:1.2px}
+html.simple .stepbtns{width:46px}
+html.simple .tab{font-size:.92rem!important;letter-spacing:.4px!important;padding:15px 3px;white-space:nowrap}
+html.simple .tab.active:before{display:none}
+html.simple input{font-size:1.15rem!important;letter-spacing:0!important}
+html.simple .tests input{padding-left:10px}
+html.simple .stepbtns{width:38px}html.simple .stepwrap input{padding-right:46px!important}
 </style></head><body><noscript><p style="padding:20px;font-family:sans-serif">Esta calculadora necesita JavaScript activado.</p></noscript><div class="app">
 <header class="app-header">
  <button type="button" id="themeBtn" class="theme-btn" aria-label="Cambiar a modo claro" title="Cambiar a modo claro">🌙</button>
