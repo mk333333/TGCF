@@ -323,7 +323,7 @@ function setErr(id,bad,key){
   el.classList.toggle('bad',bad);
   let m=w.querySelector('.err');
   if(!m){m=document.createElement('div');m.className='err';m.setAttribute('role','alert');w.appendChild(m)}
-  m.innerHTML='⚠ PARÁMETRO NO VÁLIDO<small>Rango: '+LIM_TXT[key]+'</small>';
+  m.textContent='';m.appendChild(document.createTextNode('⚠ PARÁMETRO NO VÁLIDO'));const sm=document.createElement('small');sm.textContent='Rango: '+LIM_TXT[key];m.appendChild(sm);
   m.style.display=bad?'block':'none';
 }
 function banner(){return '<div class="err-banner" role="alert">⚠ PARÁMETRO NO VÁLIDO<small>Revisa los campos marcados en rojo.</small></div>'}
@@ -411,15 +411,15 @@ function simCalc(){
    <div class="sim-table">
     <div class="result-tag"><span>Resultado de evaluación</span><strong class="threshold">${stateText}</strong></div>
     <table><tr><th>Prueba</th><th>Marca</th><th>Puntos</th></tr>
-     <tr><td>Flexo-extensiones</td><td>${push.value} rep.</td><td>${p}</td></tr>
+     <tr><td>Flexo-extensiones</td><td>${esc(push.value)} rep.</td><td>${p}</td></tr>
      <tr><td>Plancha</td><td>${fmtMark(plv)}</td><td>${pl}</td></tr>
      <tr><td>2.000 m</td><td>${fmtMark(runv)}</td><td>${r}</td></tr>
      <tr><td>Agilidad-velocidad</td><td>${a>45?exSpan(s):fmtAgil(agv)}</td><td>${ag===null?'—':ag}</td></tr>
     </table>
     <div class="metric-cards">
-     <div class="metric"><div class="metric-name">Fuerza</div><div class="metric-score">${p} <span style="font-size:.65rem;color:#68766d">PTS</span></div></div>
-     <div class="metric"><div class="metric-name">Core</div><div class="metric-score">${pl} <span style="font-size:.65rem;color:#68766d">PTS</span></div></div>
-     <div class="metric"><div class="metric-name">Resistencia</div><div class="metric-score">${r} <span style="font-size:.65rem;color:#68766d">PTS</span></div></div>
+     <div class="metric"><div class="metric-name">Fuerza</div><div class="metric-score">${p} <span class="pts-unit">PTS</span></div></div>
+     <div class="metric"><div class="metric-name">Core</div><div class="metric-score">${pl} <span class="pts-unit">PTS</span></div></div>
+     <div class="metric"><div class="metric-name">Resistencia</div><div class="metric-score">${r} <span class="pts-unit">PTS</span></div></div>
      <div class="metric"><div class="metric-name">Agilidad</div><div class="metric-score">${ag===null?exSpan(s):ag+' PTS'}</div></div>
     </div>
     <p class="small">${a>45?(s==='F'?'Exenta':'Exento')+' del circuito de agilidad-velocidad a partir de 46 años: el Anexo II no proporciona tabla y no se utiliza para el resultado.':'Umbral de aptitud: 20 puntos en cada prueba.'}</p>
@@ -442,6 +442,7 @@ function fillSimMins(){
   setExento(a>45||ag===null);
   if(!(a>45||ag===null))agil.value=String(ag).replace('.',',');
 }
+function esc(v){return String(v).replace(/[&<>"'`]/g,function(c){return '&#'+c.charCodeAt(0)+';'})}
 function exTxt(sx){return sx==='F'?'EXENTA':'EXENTO'}
 function exSpan(sx){return '<span class="rojo">'+exTxt(sx)+'</span>'}
 function setExento(on){
@@ -450,7 +451,7 @@ function setExento(on){
 }
 function simChange(){fillSimMins();simCalc()}
 function minCalc(){if(!validateAge('mage')){document.getElementById('minout').innerHTML=banner();return}minimum(+mage.value,msex.value)}
-function show(id,b){document.getElementById('min').style.display=id==='min'?'block':'none';document.getElementById('sim').style.display=id==='sim'?'block':'none';document.querySelectorAll('.tab').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-selected','false');x.tabIndex=-1});b.classList.add('active');b.setAttribute('aria-selected','true');b.tabIndex=0;if(id==='min')minCalc();else simCalc()}
+function show(id,b){document.getElementById('min').classList.toggle('oculto',id!=='min');document.getElementById('sim').classList.toggle('oculto',id!=='sim');document.querySelectorAll('.tab').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-selected','false');x.tabIndex=-1});b.classList.add('active');b.setAttribute('aria-selected','true');b.tabIndex=0;if(id==='min')minCalc();else simCalc()}
 
 /* ===== Táctil: mantener pulsado un instante y deslizar para subir/bajar valores =====
    Si el dedo se mueve antes de que se active, la página se desplaza con normalidad. */
