@@ -435,3 +435,5 @@ html.simple .stepbtns{width:38px}html.simple .stepwrap input{padding-right:46px!
 .reloj svg{display:block}.reloj .dp{animation:blink 1s steps(2,jump-none) infinite}
 html[data-theme="light"] .reloj{background:rgba(230,240,230,.6);color:#1b7a47;filter:none}
 @media(prefers-reduced-motion:reduce){.reloj .dp{animation:none}}
+.reloj{filter:drop-shadow(2px 2px 0 rgba(20,90,50,.75))!important}
+html[data-theme="light"] .reloj{filter:drop-shadow(2px 2px 0 rgba(120,170,130,.8))!important}
