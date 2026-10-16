@@ -632,3 +632,15 @@ if('serviceWorker' in navigator&&/^https?:$/.test(location.protocol)){
     b.appendChild(s);setTimeout(function(){if(s.parentNode)s.parentNode.removeChild(s)},650);
   },true);
 })();
+
+/* ===== Reloj: hora y fecha actuales (cabecera, versión web) ===== */
+;(function(){
+  var f=document.getElementById('reloj-fecha'),t=document.getElementById('reloj-hora');
+  if(!f||!t)return;
+  function tick(){
+    var d=new Date();
+    f.textContent=d.toLocaleDateString('es-ES',{weekday:'long',day:'2-digit',month:'long',year:'numeric'});
+    t.textContent=d.toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  }
+  tick();setInterval(tick,1000);
+})();

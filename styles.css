@@ -430,3 +430,4 @@ html.simple .stepbtns{width:38px}html.simple .stepwrap input{padding-right:46px!
 .card:before{animation:flow 5s ease-in-out infinite alternate!important}
 @keyframes vaiven{from{background-position:0 0,0 0}to{background-position:0 0,100% 0}}
 .card:before{background:linear-gradient(90deg,transparent,#8dffbf 50%,transparent) no-repeat,linear-gradient(90deg,rgba(47,191,110,.25),rgba(47,191,110,.25))!important;background-size:35% 100%,100% 100%!important;animation:vaiven 2.6s ease-in-out infinite alternate!important}
+.date-chip{font-variant-numeric:tabular-nums;font-size:1.05rem;letter-spacing:2px}.sys-label{text-transform:none}.sys-label::first-letter{text-transform:uppercase}
