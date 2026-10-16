@@ -437,3 +437,5 @@ html[data-theme="light"] .reloj{background:rgba(230,240,230,.6);color:#1b7a47;fi
 @media(prefers-reduced-motion:reduce){.reloj .dp{animation:none}}
 .reloj{filter:drop-shadow(2px 2px 0 rgba(20,90,50,.75))!important}
 html[data-theme="light"] .reloj{filter:drop-shadow(2px 2px 0 rgba(120,170,130,.8))!important}
+.reloj{font-family:var(--mono)!important;font-weight:800;font-size:1.5rem;letter-spacing:2px;font-variant-numeric:tabular-nums;line-height:1;filter:none!important;text-shadow:0 0 8px rgba(75,227,140,.4)}
+html[data-theme="light"] .reloj{text-shadow:none}
