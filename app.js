@@ -633,14 +633,39 @@ if('serviceWorker' in navigator&&/^https?:$/.test(location.protocol)){
   },true);
 })();
 
-/* ===== Reloj: hora y fecha actuales (cabecera, versión web) ===== */
+/* ===== Reloj: HH:MM DD/MM/AAAA en dígitos tipo segmento militar (SVG por DOM, sin innerHTML) ===== */
 ;(function(){
-  var f=document.getElementById('reloj-fecha'),t=document.getElementById('reloj-hora');
-  if(!f||!t)return;
+  var box=document.getElementById('reloj');
+  if(!box)return;
+  var NS='http://www.w3.org/2000/svg';
+  var SEG={a:[3,0,14,4],b:[16,3,4,14],c:[16,19,4,14],d:[3,32,14,4],e:[0,19,4,14],f:[0,3,4,14],g:[3,16,14,4]};
+  var DIG={'0':'abcdef','1':'bc','2':'abdeg','3':'abcdg','4':'bcfg','5':'acdfg','6':'acdefg','7':'abc','8':'abcdefg','9':'abcdfg'};
+  var svg=document.createElementNS(NS,'svg');
+  svg.setAttribute('aria-hidden','true');svg.setAttribute('focusable','false');
+  svg.setAttribute('fill','currentColor');
+  box.appendChild(svg);
+  function rect(x,y,w,h,cls){var r=document.createElementNS(NS,'rect');r.setAttribute('x',x);r.setAttribute('y',y);r.setAttribute('width',w);r.setAttribute('height',h);if(cls)r.setAttribute('class',cls);svg.appendChild(r)}
+  function draw(txt){
+    while(svg.firstChild)svg.removeChild(svg.firstChild);
+    var x=0;
+    for(var i=0;i<txt.length;i++){
+      var c=txt.charAt(i);
+      if(DIG[c]){
+        for(var k=0;k<DIG[c].length;k++){var s=SEG[DIG[c].charAt(k)];rect(x+s[0],s[1],s[2],s[3])}
+        x+=27;
+      }else if(c===':'){rect(x+3,10,5,5,'dp');rect(x+3,21,5,5,'dp');x+=14}
+      else if(c==='/'){var p=document.createElementNS(NS,'polygon');p.setAttribute('points',(x+9)+',0 '+(x+14)+',0 '+(x+5)+',36 '+x+',36');svg.appendChild(p);x+=17}
+      else x+=18;
+    }
+    svg.setAttribute('viewBox','0 0 '+(x-5)+' 36');
+    svg.setAttribute('width',Math.round((x-5)*34/36));svg.setAttribute('height','34');
+  }
+  function p2(n){return (n<10?'0':'')+n}
+  var last='';
   function tick(){
     var d=new Date();
-    f.textContent=d.toLocaleDateString('es-ES',{weekday:'long',day:'2-digit',month:'long',year:'numeric'});
-    t.textContent=d.toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+    var t=p2(d.getHours())+':'+p2(d.getMinutes())+'  '+p2(d.getDate())+'/'+p2(d.getMonth()+1)+'/'+d.getFullYear();
+    if(t!==last){last=t;draw(t);box.setAttribute('aria-label',t.replace('  ',' '))}
   }
   tick();setInterval(tick,1000);
 })();

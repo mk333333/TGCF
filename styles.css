@@ -431,3 +431,7 @@ html.simple .stepbtns{width:38px}html.simple .stepwrap input{padding-right:46px!
 @keyframes vaiven{from{background-position:0 0,0 0}to{background-position:0 0,100% 0}}
 .card:before{background:linear-gradient(90deg,transparent,#8dffbf 50%,transparent) no-repeat,linear-gradient(90deg,rgba(47,191,110,.25),rgba(47,191,110,.25))!important;background-size:35% 100%,100% 100%!important;animation:vaiven 2.6s ease-in-out infinite alternate!important}
 .date-chip{font-variant-numeric:tabular-nums;font-size:1.05rem;letter-spacing:2px}.sys-label{text-transform:none}.sys-label::first-letter{text-transform:uppercase}
+.reloj{display:inline-block;padding:10px 14px;border:1px solid var(--line2);border-radius:9px;background:rgba(7,10,9,.55);color:#4be38c;filter:drop-shadow(0 0 6px rgba(75,227,140,.45))}
+.reloj svg{display:block}.reloj .dp{animation:blink 1s steps(2,jump-none) infinite}
+html[data-theme="light"] .reloj{background:rgba(230,240,230,.6);color:#1b7a47;filter:none}
+@media(prefers-reduced-motion:reduce){.reloj .dp{animation:none}}
