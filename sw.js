@@ -2,11 +2,11 @@
    Estrategia: red primero y copia local como respaldo (así se ven las actualizaciones
    en cuanto hay conexión y la app sigue funcionando sin ella).
    Si cambias algún archivo, sube también este y aumenta VERSION. */
-const VERSION = 'tgcf-v28';
+const VERSION = 'tgcf-v29';
 const ARCHIVOS = [
   './',
   'index.html',
-  'styles.css?v=27',
+  'styles.css?v=28',
   'boot.js?v=20',
   'app.js?v=20',
   'manifest.webmanifest',
@@ -15,7 +15,7 @@ const ARCHIVOS = [
   'icons/icon-maskable-512.png',
   'icons/apple-touch-icon.png',
   'icons/favicon-32.png',
-  'icons/favicon.svg'
+  'icons/logo.png'
 ];
 
 self.addEventListener('install', function (e) {
